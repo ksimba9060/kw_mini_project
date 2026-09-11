@@ -15,5 +15,6 @@ class Main :
             self.menu.menu()
 
 
-play = Main()
-play.main()
+if __name__ == "__main__":
+    play = Main()
+    play.main()

@@ -82,3 +82,4 @@ class daily_fortune():
         print("등급 :", grade)
         print("결과 :", result)
         print()
+        return grade

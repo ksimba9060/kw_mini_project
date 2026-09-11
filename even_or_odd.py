@@ -11,7 +11,7 @@ class even_or_odd:
     def eoo_menu(self):
         print()
         print("=" * 20, "\n     홀짝 게임\n" + "=" * 20)
-        print("\n당신은 지금 1,000원을 가지고 있습니다.")
+        print(f"\n당신은 지금 {self.money}원을 가지고 있습니다.")
         print("\n1: 난이도 하. 맞히면 +500, 틀리면 -100")
         print("2: 난이도 중. 맞히면 +500, 틀리면 -300")
         print("3: 난이도 상. 맞히면 +500, 틀리면 -500")
@@ -56,8 +56,17 @@ class even_or_odd:
         while self.money > 0:
             self.eoo_play()
 
+            if self.money <= 0:
+                break
+
+            next_choice = input("\n1: 계속하기 / 0: 메뉴로 돌아가기: ")
+            if next_choice == "0":
+                print("\n홀짝 게임을 종료합니다.")
+                return
+
         print("\n잔액이 0원이 되어 게임이 종료되었습니다.")
 
 
-game = even_or_odd()
-game.eoo_start()
+if __name__ == "__main__":
+    game = even_or_odd()
+    game.eoo_start()

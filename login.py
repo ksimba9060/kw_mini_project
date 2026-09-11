@@ -16,5 +16,6 @@ class login:
         print("로그인 시도 횟수를 초과하였습니다. 프로그램을 종료합니다.")
         return False
 
-login = login()
-login.login_menu()
+if __name__ == "__main__":
+    login = login()
+    login.login_menu()
