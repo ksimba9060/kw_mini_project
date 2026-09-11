@@ -30,7 +30,3 @@ class daily_fortune():
         print()
         print(result)
         print()
-
-
-fortune = daily_fortune()
-fortune.fortune()
